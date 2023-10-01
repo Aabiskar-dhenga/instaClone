@@ -3,6 +3,11 @@ import styles from "./Profile.module.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { SlOptions } from "react-icons/sl";
+import Storyhighlight from "../Storyhighlights/Storyhighlight";
+import { Highlight } from "../../Utilis/Highlights";
+import {BsFillPostcardHeartFill} from "react-icons/bs"
+import {MdOutlineVideoLibrary}  from "react-icons/md"
+import {PiTagSimpleFill} from "react-icons/pi"
 
 const Profile = () => {
   return (
@@ -20,9 +25,12 @@ const Profile = () => {
           <div className="profileDetails">
             <div className={styles.nameWrapper}>
               <p className={styles.userName}>Suraksya Panta</p>
-              <button className={styles.followingBtn}>Following</button>
+              <button className={styles.followBtn}>Follow</button>
               <button className={styles.messageBtn}>Message</button>
+              <div  className={styles.addIconWrapper}>
+
               <IoPersonAddSharp className={styles.addIcon} />
+              </div>
               <SlOptions className={styles.threeDots} />
             </div>
             <div className={styles.followWrapper}>
@@ -41,6 +49,30 @@ const Profile = () => {
                 documentaries
               </p>
               <p>Followed by mirumgr, shrinkhala_, dayahangrai + 1 more</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.storyHighlightsWrapper}>
+          {
+            Highlight.map((item)=>{
+              return <Storyhighlight item={item}/>
+            })
+          }
+        </div>
+        <div className={styles.postContainer}>
+          <div className={styles.line}></div>
+          <div className={styles.categoryProfile}>
+            <div className={styles.categoryWrapper}>
+              <BsFillPostcardHeartFill/>
+              <p>Post</p>
+            </div>
+            <div className={styles.categoryWrapper}>
+              <MdOutlineVideoLibrary/>
+              <p>Reels</p>
+            </div>
+            <div className={styles.categoryWrapper}>
+              <PiTagSimpleFill/>
+              <p>Tagged</p>
             </div>
           </div>
         </div>
