@@ -1,0 +1,44 @@
+.postHeadingContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.postContainer{
+    width: 430px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+ 
+    gap: 0.75rem;
+}
+.postProfileImageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.postImgWrapper{
+    width: 430px;
+    height: 410px;
+
+}
+
+.postProfileImage{
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.postImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.postUsername{
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 1;
+}

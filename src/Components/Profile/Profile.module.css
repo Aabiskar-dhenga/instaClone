@@ -1,0 +1,38 @@
+.mainContainer{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    gap: 10rem;
+    height: auto;
+}
+.profileImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profileImgWrapper{
+    height: 90px;
+    width: 90px;
+}
+.profileDetailContainer{
+    display: flex;
+    gap: 3rem;
+}
+.nameWrapper{
+    display: flex;
+}
+
+.profileBox{
+   width: 50%;
+   justify-content: center;
+   background-color: rebeccapurple;
+}
+.nameWrapper{
+    display: flex;
+    gap: 2rem;
+}
+.followWrapper{
+    display: flex;
+    gap: 2rem;
+}

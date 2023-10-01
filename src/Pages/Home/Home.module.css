@@ -1,0 +1,30 @@
+.homeContainer{
+    background-color: white;
+ min-height: 100vh;
+ height: auto;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+}
+.centerBox{
+    height: 100vh;
+    overflow: scroll;
+}
+.storyImgContainer{
+    display: flex;
+    gap: 1.25rem;
+    padding-top: 2rem;
+}
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    /* justify-content: space-around; */
+    justify-content: center;
+    
+}
+.centerBox::-webkit-scrollbar{
+width: 5px;
+}

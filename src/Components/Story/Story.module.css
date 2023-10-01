@@ -1,0 +1,33 @@
+
+
+.storyImgWrapper{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 0, 0, 0.468);
+    /* background: linear-gradient(to bottom, #ff6f61, #6b5b95); */
+
+
+}
+.storyPhoto{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.storyWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.storyName{
+    font-size: 9px;
+    color: black;
+    /* letter-spacing: 1px; */
+}

@@ -1,0 +1,43 @@
+.suggestionlistContainer{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.imgWrapper{
+
+    width: 43px;
+    height: 43px;
+}
+.suggestionListProfile_img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.usernameWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestionListname_imgWrapper{
+    display: flex;
+    gap: 0.75rem;
+}
+.userFollowed{
+    color: rgb(67, 66, 66);
+    font-size: 12px;
+}
+.followTxt{
+    color: rgb(112,196,250);
+    font-size: 13px;
+    font-weight: 600;
+   
+    cursor: pointer;
+    letter-spacing: 1px;
+
+}
+.username{
+    font-size: 12px;
+    font-weight: 600;
+}
