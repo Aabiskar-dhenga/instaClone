@@ -2,8 +2,10 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
-    gap: 10rem;
+    gap: 2rem;
     height: auto;
+    padding-top: 2rem;
+  
 }
 .profileImg{
     height: 100%;
@@ -12,21 +14,28 @@
     border-radius: 50%;
 }
 .profileImgWrapper{
-    height: 90px;
-    width: 90px;
+    height: 110px;
+    width: 110px;
 }
 .profileDetailContainer{
     display: flex;
     gap: 3rem;
+    align-items: center;
 }
 .nameWrapper{
     display: flex;
 }
 
 .profileBox{
-   width: 50%;
+   width:70%;
    justify-content: center;
-   background-color: rebeccapurple;
+   /* background-color: rebeccapurple; */
+}
+.messageBtn{
+    outline: none;
+    border: none;
+    width: 90px;
+    border-radius: 7px;
 }
 .nameWrapper{
     display: flex;
@@ -35,4 +44,45 @@
 .followWrapper{
     display: flex;
     gap: 2rem;
+}
+
+.storyHighlightsWrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.categoryWrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.50rem;
+}
+.categoryProfile{
+    display: flex;
+    width: 100%;
+     justify-content: center;
+     gap: 4rem;
+}
+
+.line{
+    background-color: rgba(212, 212, 212, 0.532);
+    height: 0.5px;
+}
+
+.followBtn{
+    background-color: rgb(0,149,246);
+    color: white;
+    height: 24px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    width: 70px;
+}
+.addIconWrapper{
+    background-color: rgba(128, 128, 128, 0.152);
+    width: 35px;
+    height: 25px;
+    border-radius:7px ;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
