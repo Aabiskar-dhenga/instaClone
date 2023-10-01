@@ -1,0 +1,15 @@
+.posts{
+    height: 100%;
+    width: 100%;
+}
+.postImgWrapper{
+    height: 300px;
+    width: 300px;
+}
+.PostWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: scroll;
+    height: auto;
+}

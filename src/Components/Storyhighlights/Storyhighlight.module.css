@@ -1,16 +1,32 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .imgWrapper{
-height: 60px;
-width: 60px;
+height: 76px;
+width: 76px;
+border: 1px solid rgba(128, 128, 128, 0.396);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Poppins', sans-serif;
 }
 .highlightImg{
     object-fit: cover;
-    height: 100%;
-    width: 100%;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
 
+}
+.highlightTitle{
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 .highlightCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }

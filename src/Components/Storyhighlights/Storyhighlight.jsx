@@ -1,17 +1,19 @@
-import React from 'react'
-import styles from "./Storyhighlight.module.css"
+import React from "react";
+import styles from "./Storyhighlight.module.css";
 
-const Storyhighlight = ({item}) => {
+const Storyhighlight = ({ item }) => {
   return (
     <div className={styles.highlightCard}>
-        <div className={styles.imgWrapper}>
-
-        
-        <img src={item.img} alt="highlightImg"  className={styles.highlightImg} />
-        </div>
-        <p>{item.title}</p>
+      <div className={styles.imgWrapper}>
+        <img
+          src={item.img}
+          alt="highlightImg"
+          className={styles.highlightImg}
+        />
+      </div>
+      <p className={styles.highlightTitle}>{item.title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Storyhighlight
+export default Storyhighlight;

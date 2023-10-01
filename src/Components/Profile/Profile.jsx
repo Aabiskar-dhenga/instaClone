@@ -5,9 +5,10 @@ import { IoPersonAddSharp } from "react-icons/io5";
 import { SlOptions } from "react-icons/sl";
 import Storyhighlight from "../Storyhighlights/Storyhighlight";
 import { Highlight } from "../../Utilis/Highlights";
-import {BsFillPostcardHeartFill} from "react-icons/bs"
-import {MdOutlineVideoLibrary}  from "react-icons/md"
-import {PiTagSimpleFill} from "react-icons/pi"
+import { BsFillPostcardHeartFill } from "react-icons/bs";
+import { MdOutlineVideoLibrary } from "react-icons/md";
+import { PiTagSimpleFill } from "react-icons/pi";
+import Photopost from "../photo/Photopost";
 
 const Profile = () => {
   return (
@@ -22,58 +23,71 @@ const Profile = () => {
               alt="profileImg"
             />
           </div>
-          <div className="profileDetails">
+          <div className={styles.profileDetails}>
             <div className={styles.nameWrapper}>
-              <p className={styles.userName}>Suraksya Panta</p>
+              <h3 className={styles.userName}>Shrees_Kushal</h3>
               <button className={styles.followBtn}>Follow</button>
               <button className={styles.messageBtn}>Message</button>
-              <div  className={styles.addIconWrapper}>
-
-              <IoPersonAddSharp className={styles.addIcon} />
+              <div className={styles.addIconWrapper}>
+                <IoPersonAddSharp className={styles.addIcon} />
               </div>
               <SlOptions className={styles.threeDots} />
             </div>
             <div className={styles.followWrapper}>
-              <p className={styles.posts}>1,345 posts</p>
-              <p className={styles.followerList}>122k followers</p>
-              <p className={styles.followingList}>184 following</p>
+              <p className={styles.posts}>
+                <span className={styles.number}>1,345 </span> posts
+              </p>
+              <p className={styles.followerList}>
+                <span className={styles.number}>122k</span>
+                followers
+              </p>
+              <p className={styles.followingList}>
+                <span className={styles.number}>184</span>
+                following
+              </p>
             </div>
             <div className={styles.nameWrapper}>
-              <p className={styles.name}>Surakysha Panta</p>
+              <p className={styles.name}>Kushal shrees</p>
             </div>
             <div className={styles.bioWrapper}>
               <p className={styles.bio}>
-                hey I am Surakhya panta i am professional actor <br />
-                and I love dancing and i <br />
-                am also a very big part of nepal best <br />
-                documentaries
+                👨🏻‍💻 CS Student <br />
+                👨‍🎤 Frontend Developer <br />
+                🚀MernStack || GSOC 2022
               </p>
-              <p>Followed by mirumgr, shrinkhala_, dayahangrai + 1 more</p>
+              <p className={styles.followedBy}>
+                <span className={styles.followedbyTxt}>Followed by</span>
+                cr7Horaa, codingGuru...
+              </p>
             </div>
           </div>
         </div>
+
         <div className={styles.storyHighlightsWrapper}>
-          {
-            Highlight.map((item)=>{
-              return <Storyhighlight item={item}/>
-            })
-          }
+          {Highlight.map((item) => {
+            return <Storyhighlight item={item} />;
+          })}
         </div>
         <div className={styles.postContainer}>
           <div className={styles.line}></div>
           <div className={styles.categoryProfile}>
             <div className={styles.categoryWrapper}>
-              <BsFillPostcardHeartFill/>
+              <BsFillPostcardHeartFill />
               <p>Post</p>
             </div>
             <div className={styles.categoryWrapper}>
-              <MdOutlineVideoLibrary/>
+              <MdOutlineVideoLibrary />
               <p>Reels</p>
             </div>
             <div className={styles.categoryWrapper}>
-              <PiTagSimpleFill/>
+              <PiTagSimpleFill />
               <p>Tagged</p>
             </div>
+          </div>
+          <div className={styles.PostWrapper}>
+            <Photopost />
+            <Photopost />
+            <Photopost />
           </div>
         </div>
       </div>
