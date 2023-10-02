@@ -5,9 +5,13 @@ const Story = ({ item }) => {
   return (
     <div className={styles.storyWrapper}>
       <div className={styles.storyImgWrapper}>
-        <img className={styles.storyPhoto} src={item.img} alt="ladkikophoto" />
+        <img
+          className={styles.storyPhoto}
+          src={item.picture}
+          alt="ladkikophoto"
+        />
       </div>
-      <p className={styles.storyName}>{item.name}</p>
+      <p className={styles.storyName}>{item.firstName}</p>
     </div>
   );
 };

@@ -13,7 +13,17 @@
 .storyImgContainer{
     display: flex;
     gap: 1.25rem;
+    width: 80%;
+overflow-x: scroll;
+/* overflow-x: hidden; */
+
+
+    
+    box-sizing: border-box;
     padding-top: 2rem;
+}
+.storyImgContainer::-webkit-scrollbar{
+    display: none;
 }
 
 .bodyContainer{

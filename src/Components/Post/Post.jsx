@@ -3,7 +3,7 @@ import styles from "./Post.module.css";
 import { SlOptions } from "react-icons/sl";
 
 const Post = ({ item }) => {
-  // console.log("this is item", item);
+  console.log("this is post item", item);
   return (
     <div className={styles.postContainer}>
       <div className={styles.postHeadingContainer}>

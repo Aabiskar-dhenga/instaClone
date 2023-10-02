@@ -6,17 +6,24 @@ import Post from "../../Components/Post/Post";
 import { Storydata } from "../../Utilis/Storydata";
 import Story from "../../Components/Story/Story";
 import axios from "axios";
+import CreatePost from "../../Components/CreatePost/CreatePost";
 
 const Home = () => {
   let [post, setPost] = useState([]);
   let [user, setUser] = useState([]);
+  let [StoryData, setStoryData] = useState([]);
+
   // api keys
   let postApi = "https://dummyapi.io/data/v1/post";
+  let apiStory = "https://dummyapi.io/data/v1/user";
   // api keys end
 
   // useEffects
   useEffect(() => {
     postfetchApi();
+  }, []);
+  useEffect(() => {
+    FetchStory();
   }, []);
 
   let postfetchApi = async () => {
@@ -27,6 +34,17 @@ const Home = () => {
     });
 
     setPost(data.data);
+  };
+
+  let FetchStory = async () => {
+    let { data } = await axios.get(apiStory, {
+      headers: {
+        "app-id": "651562a4a14b3c63fae4a0d5",
+      },
+    });
+    console.log("this is sorydata", data);
+    let storydata = data.data;
+    setStoryData(storydata);
   };
 
   return (
@@ -40,10 +58,12 @@ const Home = () => {
       <div className={styles.centerBox}>
         <div className={styles.bodyContainer}>
           <div className={styles.storyImgContainer}>
-            {Storydata.map((item) => {
+            {StoryData.map((item) => {
               return <Story item={item} />;
             })}
           </div>
+
+          <CreatePost />
 
           {post.map((item) => {
             return <Post item={item} />;
