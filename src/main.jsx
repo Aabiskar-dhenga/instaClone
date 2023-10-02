@@ -12,7 +12,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/:id" element={<Profile />} />
+
+      {/* My doubts that i should ask to mama */}
+      {/* //My doubts my we have used useParams
+       in the previus route i mean look
+        at this i have done without using useParams */}
     </Routes>
   </BrowserRouter>
 );

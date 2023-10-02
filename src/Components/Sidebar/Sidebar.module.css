@@ -10,6 +10,10 @@ padding: 1rem;
 /* background-color: red; */
 border-right: 1px solid rgba(128, 128, 128, 0.183);
 }
+.Link{
+    text-decoration: none;
+    color: black;
+}
 
 .iconWrapper{
     display: flex;

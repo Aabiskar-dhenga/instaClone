@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./SuggestionList.module.css";
+import { Link } from "react-router-dom";
 
 const SuggestionList = ({ data }) => {
+  // console.log("this is data", data);
   return (
     <div className={styles.suggestionlistContainer}>
       <div className={styles.suggestionListname_imgWrapper}>
@@ -12,7 +14,13 @@ const SuggestionList = ({ data }) => {
           />
         </div>
         <div className={styles.usernameWrapper}>
-          <p className={styles.username}>{data.firstName} </p>
+          <Link
+            className={styles.profileRooute}
+            state={data}
+            to={`/profile/${data.id}`}
+          >
+            <p className={styles.username}>{data.firstName} </p>
+          </Link>
           <p className={styles.userFollowed}>Followed by 97 other</p>
         </div>
       </div>
