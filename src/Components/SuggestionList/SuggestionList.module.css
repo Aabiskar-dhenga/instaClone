@@ -39,5 +39,10 @@
 }
 .username{
     font-size: 12px;
+    cursor: pointer;
     font-weight: 600;
+}
+.profileRooute{
+    text-decoration: none;
+    color: black;
 }

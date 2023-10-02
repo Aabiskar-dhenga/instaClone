@@ -4,12 +4,11 @@
 }
 .postImgWrapper{
     height: 300px;
-    width: 300px;
+    width: 250px;
 }
 .PostWrapper{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    overflow: scroll;
     height: auto;
 }

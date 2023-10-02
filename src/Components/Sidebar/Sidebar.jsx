@@ -8,11 +8,14 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { MdOutlineAddBox } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className={styles.sidebarContainer}>
-      <h3>Instagram</h3>
+      <Link className={styles.Link}  to="/">
+        <h3 >Instagram</h3>
+      </Link>
       <div className={styles.sidebarContent}>
         <div className={styles.iconWrapper}>
           <AiFillHome className={styles.sidebarIcon} />
