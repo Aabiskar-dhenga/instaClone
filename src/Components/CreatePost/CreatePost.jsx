@@ -21,7 +21,12 @@ const CreatePost = () => {
 
   let PostCreate = async () => {
     alert("activated");
+
+    
     try {
+      if(InputUrl.length>0) {
+
+      
       const { data, status } = await axios.post(
         postApi,
         {
@@ -41,6 +46,10 @@ const CreatePost = () => {
       if (status == 200) {
         alert("successful");
       }
+    } 
+    else{
+      alert("enter something")
+    }
     } catch (error) {
       console.log(error);
     }
@@ -51,13 +60,7 @@ const CreatePost = () => {
   return (
     <div className={styles.createPostContainer}>
       <div className={styles.UpperBox}>
-        <div className={styles.imgWrapper}>
-          <img
-            className={styles.profileImg}
-            src="https://images.pexels.com/photos/35183/people-homeless-man-male.jpg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
+      
         <div className={styles.inputWrapper}>
           <input
             className={styles.inputBox}
@@ -80,7 +83,7 @@ const CreatePost = () => {
         </div>
       </div>
       <div className={styles.btnWrapper}>
-        <button onClick={PostCreate} className={styles.postBtn}>
+        <button onClick={PostCreate} className="text-slate-900 bg-red-500	  cursor-pointer">
           Post
         </button>
       </div>

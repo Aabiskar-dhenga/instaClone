@@ -54,16 +54,6 @@
     padding-left: 12px;
     border: none;
 }
-.postBtn{
-    text-align: center;
-    width: 100px;
-    background-color: rebeccapurple;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    border-radius:8px;
-}
-
 .btnWrapper{
     width: 100%;
     display: flex;
