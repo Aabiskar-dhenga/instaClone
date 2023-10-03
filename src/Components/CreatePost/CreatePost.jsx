@@ -44,6 +44,8 @@ const CreatePost = () => {
     } catch (error) {
       console.log(error);
     }
+    setStatus("");
+    setInputUrl("");
   };
 
   return (
