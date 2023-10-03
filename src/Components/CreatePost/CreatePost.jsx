@@ -20,26 +20,31 @@ const CreatePost = () => {
   };
 
   let PostCreate = async () => {
-    alert("Post  button is clicked");
-    try {
-      const { data, status } = await axios.post(
-        postApi,
-        {
-          text: InputStatus,
-          image: InputUrl,
+    alert("activated");
 
-          likes: 122,
-          tags: ["programming"],
-          owner: "60d0fe4f5311236168a109cb",
-        },
-        {
-          headers: {
-            "app-id": "651562a4a14b3c63fae4a0d5",
+    try {
+      if (InputUrl.length > 0) {
+        const { data, status } = await axios.post(
+          postApi,
+          {
+            text: InputStatus,
+            image: InputUrl,
+
+            likes: 122,
+            tags: ["programming"],
+            owner: "60d0fe4f5311236168a109cb",
           },
+          {
+            headers: {
+              "app-id": "651562a4a14b3c63fae4a0d5",
+            },
+          }
+        );
+        if (status == 200) {
+          alert("successful");
         }
-      );
-      if (status == 200) {
-        alert("successful");
+      } else {
+        alert("enter something");
       }
     } catch (error) {
       console.log(error);
@@ -51,13 +56,6 @@ const CreatePost = () => {
   return (
     <div className={styles.createPostContainer}>
       <div className={styles.UpperBox}>
-        <div className={styles.imgWrapper}>
-          <img
-            className={styles.profileImg}
-            src="https://images.pexels.com/photos/35183/people-homeless-man-male.jpg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-        </div>
         <div className={styles.inputWrapper}>
           <input
             className={styles.inputBox}
@@ -80,7 +78,10 @@ const CreatePost = () => {
         </div>
       </div>
       <div className={styles.btnWrapper}>
-        <button onClick={PostCreate} className={styles.postBtn}>
+        <button
+          onClick={PostCreate}
+          className="text-slate-900 bg-red-500	  cursor-pointer"
+        >
           Post
         </button>
       </div>
