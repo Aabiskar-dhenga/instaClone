@@ -1,0 +1,54 @@
+.commentContainer{
+    background-color: rgba(250, 245, 245, 0.066);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 12px;
+    height: 112px;
+    justify-content: center;
+}
+
+.inputBox{
+    padding-left: 12px;
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.272);
+    
+    border-radius: 8px;
+}
+
+.btnWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+
+.commentBtn{
+    height: 30px;width: 102px;
+    background-color: red;
+    color: white;
+    outline: none;
+cursor: pointer;
+font-size: 12px;
+border-radius: 8px;
+border: none;
+
+}
+.cancelBtn{
+font-size: 12px;
+    height: 30px;width: 102px;
+    background-color: black;
+    color: white;
+    outline: none;
+cursor: pointer;
+border-radius: 8px;
+    border: none;
+
+}

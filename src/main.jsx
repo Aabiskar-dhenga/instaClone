@@ -5,7 +5,7 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // Import from react-router-dom
 import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
-import Profile from "./Components/Profile/Profile.jsx";
+import Profile from "./Pages/Profile/Profile.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

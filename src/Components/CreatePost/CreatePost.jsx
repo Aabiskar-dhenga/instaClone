@@ -20,10 +20,8 @@ const CreatePost = () => {
   };
 
   let PostCreate = async () => {
-    alert("activated");
-
     try {
-      if (InputUrl.length > 0) {
+      if (InputUrl.length > 0 && InputStatus.length > 0) {
         const { data, status } = await axios.post(
           postApi,
           {
@@ -44,7 +42,7 @@ const CreatePost = () => {
           alert("successful");
         }
       } else {
-        alert("enter something");
+        alert("can't post enter something");
       }
     } catch (error) {
       console.log(error);

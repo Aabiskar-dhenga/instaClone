@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { SlOptions } from "react-icons/sl";
-import Storyhighlight from "../Storyhighlights/Storyhighlight";
+import Storyhighlight from "../../Components/Storyhighlights/Storyhighlight";
 import { Highlight } from "../../Utilis/Highlights";
 import { BsFillPostcardHeartFill } from "react-icons/bs";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { PiTagSimpleFill } from "react-icons/pi";
-import Photopost from "../photo/Photopost";
+import Photopost from "../../Components/photo/Photopost";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 
