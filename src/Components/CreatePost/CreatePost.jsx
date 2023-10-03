@@ -20,7 +20,7 @@ const CreatePost = () => {
   };
 
   let PostCreate = async () => {
-    alert("activated");
+    alert("Post  button is clicked");
     try {
       const { data, status } = await axios.post(
         postApi,
