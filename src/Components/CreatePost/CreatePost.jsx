@@ -80,7 +80,7 @@ const CreatePost = () => {
       <div className={styles.btnWrapper}>
         <button
           onClick={PostCreate}
-          className="text-slate-900 bg-red-500	  cursor-pointer"
+          className={styles.postBtn}
         >
           Post
         </button>
