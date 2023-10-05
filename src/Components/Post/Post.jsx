@@ -28,7 +28,7 @@ const Post = ({ item }) => {
         <img className={styles.postImg} src={item.image} alt="img" />
         {/* <AiFillDelete className={styles.deleteIcon} onClick={handleDelete(item.id)} /> */}
       </div>
-      <CommentSection />
+      <CommentSection item = { item} />
     </div>
   );
 };

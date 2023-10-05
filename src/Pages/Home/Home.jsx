@@ -34,6 +34,7 @@ const Home = () => {
     });
 
     setPost(data.data);
+    console.log("this are the post", post);
   };
 
   let FetchStory = async () => {
@@ -42,7 +43,6 @@ const Home = () => {
         "app-id": "651562a4a14b3c63fae4a0d5",
       },
     });
-    console.log("this is sorydata", data);
     let storydata = data.data;
     setStoryData(storydata);
   };
