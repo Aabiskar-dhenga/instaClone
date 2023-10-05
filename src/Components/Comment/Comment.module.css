@@ -1,0 +1,34 @@
+.commentImg{
+    width: 100%;height: 100%;
+    border-radius: 50%;
+}
+
+.imgWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.commentArea{
+    display: flex;
+    flex-direction: column;
+    
+}
+.commentBox{
+    background-color: rgba(128, 128, 128, 0.386);
+    height: 100px;
+    display: flex;
+    width: 100%;
+    display: flex   ;
+}
+.commentText{
+color: black;
+}
+
+.commentWrapper{
+    display: flex;
+    color: black;
+
+}

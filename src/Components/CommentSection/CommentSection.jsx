@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./CommentSection.module.css";
 import { useState } from "react";
 import axios from "axios";
+import Comment from "../Comment/Comment";
 
 const CommentSection = ({ item }) => {
   const api = "https://dummyapi.io/data/v1/comment/create";
@@ -41,6 +42,7 @@ const CommentSection = ({ item }) => {
       }
     );
     console.log("this comment api has called", data);
+    setInputComment("");
   };
 
   return (
@@ -58,6 +60,9 @@ const CommentSection = ({ item }) => {
         <button onClick={CreateComment} className={styles.commentBtn}>
           Comment
         </button>
+      </div>
+      <div className={styles.commentWrapper}>
+        <Comment item={item} />
       </div>
     </div>
   );

@@ -58,4 +58,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+}
+
+.postBtn{
+    width: 100px;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 30px;
+    color: white;
+    background-color: rgb(16, 14, 14);
 }
