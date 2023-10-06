@@ -10,25 +10,38 @@
     width: 30px;
     height: 30px;
 }
+.name{
+color: black;
+    font-size: 12px;
+}
 
 .commentArea{
     display: flex;
+    background-color: aliceblue;
     flex-direction: column;
+    width: 100%;
     
 }
 .commentBox{
-    background-color: rgba(128, 128, 128, 0.386);
-    height: 100px;
+    background-color: aliceblue;
+    height: 60px;
     display: flex;
     width: 100%;
     display: flex   ;
 }
-.commentText{
+.commentTxt{
 color: black;
+font-size: 12px;
+font-weight: 600;
+
 }
 
 .commentWrapper{
     display: flex;
     color: black;
+    align-items: center;
+justify-content: space-between;
 
 }
+
+

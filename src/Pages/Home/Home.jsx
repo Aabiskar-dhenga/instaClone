@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Usercontainer from "../../Components/UserContainer/Usercontainer";
 import Post from "../../Components/Post/Post";
-import { Storydata } from "../../Utilis/Storydata";
 import Story from "../../Components/Story/Story";
 import axios from "axios";
 import CreatePost from "../../Components/CreatePost/CreatePost";
@@ -63,11 +62,12 @@ const Home = () => {
             })}
           </div>
 
-          <CreatePost />
-
-          {post.map((item) => {
-            return <Post item={item} />;
-          })}
+          <CreatePost postfetchApi={postfetchApi} />
+          <div className={styles.postWrapper}>
+            {post.map((item) => {
+              return <Post post={post} setPost={setPost} item={item} />;
+            })}
+          </div>
         </div>
       </div>
       {/* and body container ends here  */}

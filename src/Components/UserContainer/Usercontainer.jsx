@@ -18,7 +18,7 @@ const Usercontainer = () => {
         "app-id": "651562a4a14b3c63fae4a0d5",
       },
     });
-    console.log("this is userData", data);
+    // console.log("this is userData", data);
     setUser(data.data);
   };
   return (

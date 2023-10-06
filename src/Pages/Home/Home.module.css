@@ -38,3 +38,11 @@ overflow-x: scroll;
 .centerBox::-webkit-scrollbar{
 width: 5px;
 }
+
+.postWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}

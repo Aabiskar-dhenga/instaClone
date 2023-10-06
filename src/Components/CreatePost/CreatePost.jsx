@@ -4,7 +4,7 @@ import { BiSolidVideoPlus } from "react-icons/bi";
 import { FaPhotoVideo } from "react-icons/fa";
 import { TfiFaceSmile } from "react-icons/tfi";
 import axios from "axios";
-const CreatePost = () => {
+const CreatePost = ({ postfetchApi }) => {
   let postApi = "https://dummyapi.io/data/v1/post/create";
   let [InputStatus, setStatus] = useState("");
   let [InputUrl, setInputUrl] = useState("");
@@ -39,6 +39,7 @@ const CreatePost = () => {
           }
         );
         if (status == 200) {
+          postfetchApi();
           alert("successful");
         }
       } else {
@@ -70,16 +71,13 @@ const CreatePost = () => {
             className={styles.inputBox}
             value={InputUrl}
             onChange={handleUrlInput}
-            placeholder="What's on Your mind Aabiskar ?"
+            placeholder="Enter the Image url"
             type="text"
           />
         </div>
       </div>
       <div className={styles.btnWrapper}>
-        <button
-          onClick={PostCreate}
-          className={styles.postBtn}
-        >
+        <button onClick={PostCreate} className={styles.postBtn}>
           Post
         </button>
       </div>
