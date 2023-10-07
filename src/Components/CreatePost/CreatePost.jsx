@@ -34,7 +34,7 @@ const CreatePost = ({ postfetchApi }) => {
           },
           {
             headers: {
-              "app-id": "651562a4a14b3c63fae4a0d5",
+              "app-id": "651560a4a14b3c63fae4a0d5",
             },
           }
         );
