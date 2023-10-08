@@ -11,8 +11,9 @@ import {
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
+import SearchProfile from "../SearchProfile/SearchProfile";
 
-export const Searchmodal = ({ showModal, setShowModal }) => {
+export const Searchmodal = ({ showModal, setShowModal,searcedResultCollection}) => {
   const onClose = () => {
     setShowModal(false);
   };
@@ -24,17 +25,7 @@ export const Searchmodal = ({ showModal, setShowModal }) => {
           <ModalHeader>Search Username</ModalHeader>
           <ModalCloseButton onClick={onClose} />
           <ModalBody>
-            <div className={styles.profileWrapper}>
-              <img
-                src="https://images.pexels.com/photos/14980615/pexels-photo-14980615/free-photo-of-city-road-man-people.jpeg?auto=compress&cs=tinysrgb&w=600"
-                className={styles.img}
-                alt=""
-              />
-              <div className={styles.detail}>
-                <h3 className={styles.name}>Ayush Raymajhi</h3>
-                <p className={styles.address}>Sweden 12 pkr</p>
-              </div>
-            </div>
+            <SearchProfile searcedResultCollection={searcedResultCollection} />
           </ModalBody>
         </ModalContent>
       </Modal>

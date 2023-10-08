@@ -41,7 +41,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <Searchmodal showModal={showModal} setShowModal={setShowModal} />
+      <Searchmodal searcedResultCollection={searcedResultCollection} showModal={showModal} setShowModal={setShowModal} />
 
       <div className={styles.navbarContainer}>
         <input
