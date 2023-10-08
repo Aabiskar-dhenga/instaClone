@@ -6,6 +6,7 @@ import Post from "../../Components/Post/Post";
 import Story from "../../Components/Story/Story";
 import axios from "axios";
 import CreatePost from "../../Components/CreatePost/CreatePost";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Home = () => {
   let [post, setPost] = useState([]);
@@ -55,6 +56,7 @@ const Home = () => {
       {/* Sidebar ends from here */}
       {/* body container starts here  */}
       <div className={styles.centerBox}>
+        <Navbar />
         <div className={styles.bodyContainer}>
           <div className={styles.storyImgContainer}>
             {StoryData.map((item) => {

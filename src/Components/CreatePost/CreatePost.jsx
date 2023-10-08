@@ -4,6 +4,7 @@ import { BiSolidVideoPlus } from "react-icons/bi";
 import { FaPhotoVideo } from "react-icons/fa";
 import { TfiFaceSmile } from "react-icons/tfi";
 import axios from "axios";
+
 const CreatePost = ({ postfetchApi }) => {
   let postApi = "https://dummyapi.io/data/v1/post/create";
   let [InputStatus, setStatus] = useState("");
@@ -34,7 +35,7 @@ const CreatePost = ({ postfetchApi }) => {
           },
           {
             headers: {
-              "app-id": "651560a4a14b3c63fae4a0d5",
+              "app-id": "651562a4a14b3c63fae4a0d5",
             },
           }
         );

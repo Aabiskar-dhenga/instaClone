@@ -5,11 +5,21 @@ import { SlOptions } from "react-icons/sl";
 import CommentSection from "../CommentSection/CommentSection";
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
+import axios from "axios";
 
 const Post = ({ item, post, setPost }) => {
-  let handleDeletePost = (deletingId) => {
-    let data = post.filter((item) => item.id !== deletingId);
-    setPost(data);
+  let handleDeletePost = async (deletingId) => {
+    try {
+      await axios.delete(`https://dummyapi.io/data/v1/post/${item.id}`, {
+        headers: {
+          "app-id": "651562a4a14b3c63fae4a0d5",
+        },
+      });
+      let data = post.filter((item) => item.id !== deletingId);
+      setPost(data);
+    } catch (error) {
+      console.log("this is error ", error);
+    }
   };
 
   return (

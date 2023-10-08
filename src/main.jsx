@@ -6,18 +6,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"; // Import from 
 import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Profile from "./Pages/Profile/Profile.jsx";
+import { ChakraProvider } from "@chakra-ui/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/profile/:id" element={<Profile />} />
-
-      {/* My doubts that i should ask to mama */}
-      {/* //My doubts my we have used useParams
-       in the previus route i mean look
-        at this i have done without using useParams */}
-    </Routes>
-  </BrowserRouter>
+  <ChakraProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile/:id" element={<Profile />} />
+      </Routes>
+    </BrowserRouter>
+  </ChakraProvider>
 );
