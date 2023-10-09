@@ -1,18 +1,14 @@
 import React from "react";
 import styles from "./SearchProfile.module.css";
 
-const SearchProfile = ({ searcedResultCollection }) => {
-  console.log("this is searcedResultCollection", searcedResultCollection);
+const SearchProfile = ({ item }) => {
+  console.log("this is searcedResultCollection", item);
   return (
     <div className={styles.profileWrapper}>
-      <img
-        src={searcedResultCollection.picture}
-        className={styles.img}
-        alt=""
-      />
+      <img src={item.picture} className={styles.img} alt="" />
       <div className={styles.detail}>
-        <h3 className={styles.name}>{searcedResultCollection.firstName}</h3>
-        <p className={styles.address}>{searcedResultCollection.lastName}</p>
+        <h3 className={styles.name}>{item.firstName}</h3>
+        <p className={styles.address}>{item.lastName}</p>
       </div>
     </div>
   );

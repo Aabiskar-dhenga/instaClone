@@ -25,7 +25,12 @@ export const Searchmodal = ({ showModal, setShowModal,searcedResultCollection}) 
           <ModalHeader>Search Username</ModalHeader>
           <ModalCloseButton onClick={onClose} />
           <ModalBody>
-            <SearchProfile searcedResultCollection={searcedResultCollection} />
+            {
+              searcedResultCollection.map((item)=>{
+
+           return   <SearchProfile item={item} />
+              })
+            }
           </ModalBody>
         </ModalContent>
       </Modal>

@@ -31,17 +31,22 @@ const Navbar = () => {
     console.log("get all user", allTheData);
   };
   let SearchedFetch = () => {
+    alert("searched");
     let searcedResults = userCollection.filter((item) =>
-      item.firstName.startsWith(SearchedInfo)
+      // (item) => item.firstName.startsWith(SearchedInfo),
+      item.firstName.toLowerCase().startsWith(SearchedInfo.toLowerCase())
     );
-    // setSearchResultCollection(searcedResults);
     setsearcedResultCollection(searcedResults);
     setShowModal(true);
     console.log("this is searchedRsult", searcedResults);
   };
   return (
     <>
-      <Searchmodal searcedResultCollection={searcedResultCollection} showModal={showModal} setShowModal={setShowModal} />
+      <Searchmodal
+        searcedResultCollection={searcedResultCollection}
+        showModal={showModal}
+        setShowModal={setShowModal}
+      />
 
       <div className={styles.navbarContainer}>
         <input
