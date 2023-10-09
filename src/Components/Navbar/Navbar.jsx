@@ -31,7 +31,6 @@ const Navbar = () => {
     console.log("get all user", allTheData);
   };
   let SearchedFetch = () => {
-    alert("searched");
     let searcedResults = userCollection.filter((item) =>
       // (item) => item.firstName.startsWith(SearchedInfo),
       item.firstName.toLowerCase().startsWith(SearchedInfo.toLowerCase())

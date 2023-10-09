@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Profile from "./Pages/Profile/Profile.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
+import CreateUser from "./Components/CreateUser/CreateUser.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ChakraProvider>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/createuser" element={<CreateUser />} />
       </Routes>
     </BrowserRouter>
   </ChakraProvider>
