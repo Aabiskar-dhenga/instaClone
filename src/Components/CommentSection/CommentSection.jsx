@@ -1,10 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./CommentSection.module.css";
 import { useState } from "react";
 import axios from "axios";
 import Comment from "../Comment/Comment";
+import { UserDetailContext } from "../../Usecontext/Usecontext";
 
 const CommentSection = ({ item }) => {
+  const {
+    state: { userInfo },
+    dispatch,
+  } = useContext(UserDetailContext);
+  console.log("this is state", userInfo);
   // console.log("this is okkitem", item);
 
   const api = `https://dummyapi.io/data/v1/post/${item.id}/comment`;
@@ -95,7 +101,6 @@ const CommentSection = ({ item }) => {
               commentArr={commentArr}
               setCommentArr={setCommentArr}
               item={item}
-
             />
           );
         })}

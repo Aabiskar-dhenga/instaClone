@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./CreatePost.module.css";
 import { BiSolidVideoPlus } from "react-icons/bi";
 import { FaPhotoVideo } from "react-icons/fa";
 import { TfiFaceSmile } from "react-icons/tfi";
 import axios from "axios";
+import { UserDetailContext } from "../../Usecontext/Usecontext";
 
 const CreatePost = ({ postfetchApi }) => {
+  const {
+    state: { userInfo },
+    dispatch,
+  } = useContext(UserDetailContext);
   let postApi = "https://dummyapi.io/data/v1/post/create";
   let [InputStatus, setStatus] = useState("");
   let [InputUrl, setInputUrl] = useState("");
+  // let [ ownerId, setownerId] = useState("")
   let handleInput = (e) => {
     let statusTxt = e.target.value;
     setStatus(statusTxt);
@@ -31,7 +37,7 @@ const CreatePost = ({ postfetchApi }) => {
 
             likes: 122,
             tags: ["programming"],
-            owner: "60d0fe4f5311236168a109cb",
+            owner: userInfo.id,
           },
           {
             headers: {

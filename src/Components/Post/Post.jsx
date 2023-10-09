@@ -8,6 +8,7 @@ import "@szhsin/react-menu/dist/index.css";
 import axios from "axios";
 
 const Post = ({ item, post, setPost }) => {
+  console.log("this is post data", item);
   let handleDeletePost = async (deletingId) => {
     try {
       await axios.delete(`https://dummyapi.io/data/v1/post/${item.id}`, {

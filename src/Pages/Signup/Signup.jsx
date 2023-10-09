@@ -3,6 +3,7 @@ import styles from "./Signup.module.css";
 import { AiFillFacebook } from "react-icons/ai";
 import axios from "axios";
 import { UserDetailContext } from "../../Usecontext/Usecontext";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 
 const Signup = () => {
@@ -103,6 +104,13 @@ const Signup = () => {
         <button onClick={CreateAccount} className={styles.signupBtn}>
           Signup
         </button>
+
+        <div className={styles.loginWrapper}>
+          <p>Already Have a Account ?</p>
+          <Link to={"/login"}>
+            <button className={styles.loginBtn}>Login</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

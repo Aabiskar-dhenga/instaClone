@@ -7,7 +7,7 @@ import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Profile from "./Pages/Profile/Profile.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
-import Signup from "./Components/Signup/Signup.jsx";
+import Signup from "./Pages/Signup/Signup.jsx";
 import { UserContextProvider } from "./Usecontext/Usecontext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
