@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Usercontainer.module.css";
 import SuggestionList from "../SuggestionList/SuggestionList";
 import { Suggestiondata } from "../../Utilis/Suggestiondata";
 import axios from "axios";
+import { UserDetailContext } from "../../Usecontext/Usecontext";
 
 const Usercontainer = () => {
   let [user, setUser] = useState([]);
   let userApi = "https://dummyapi.io/data/v1/user";
+
+  const {
+    state: { userInfo },
+  } = useContext(UserDetailContext);
 
   useEffect(() => {
     userFetchApi();
@@ -33,8 +38,8 @@ const Usercontainer = () => {
             />
           </div>
           <div className={styles.usernameWrapper}>
-            <p className={styles.Name}>aabiskardhenga</p>
-            <p className={styles.username}>Aabiskar Dhenga</p>
+            <p className={styles.Name}>{userInfo?.firstName}</p>
+            <p className={styles.username}>{userInfo?.email}</p>
           </div>
         </div>
         <div>

@@ -1,43 +1,53 @@
-import React, { useState } from "react";
-import styles from "./createuser.module.css";
+import React, { useContext, useState } from "react";
+import styles from "./Signup.module.css";
 import { AiFillFacebook } from "react-icons/ai";
 import axios from "axios";
+import { UserDetailContext } from "../../Usecontext/Usecontext";
+import { useNavigate } from "react-router";
 
-const CreateUser = () => {
+const Signup = () => {
   let api = "https://dummyapi.io/data/v1/user/create";
-  let [firstName, setfirstName] = useState();
-  let [lastName, setlastName] = useState();
-  let [email, setEmail] = useState();
-  let handleName = (e) => {
-    let name = e.target.value;
-    setfirstName(name);
-  };
-  let handleLastName = (e) => {
-    let lastname = e.target.value;
-    setlastName(lastname);
-  };
-  let handleEmail = (e) => {
-    let email = e.target.value;
-    setEmail(email);
+  const [registerSuccess, setRegisterSuccess] = useState(false);
+  const [userData, setUserData] = useState({});
+  const navigate = useNavigate();
+  const [registerData, setRegisterData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
+  let { dispatch } = useContext(UserDetailContext);
+
+  const handleRegisterInput = (event) => {
+    const { value, name } = event.target;
+
+    setRegisterData((prev) => {
+      return { ...prev, [name]: value };
+    });
   };
 
   let CreateAccount = async () => {
-    await axios.post(
-      api,
-      {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-      },
-      {
+    try {
+      let { data, status } = await axios.post(api, registerData, {
         headers: {
           "app-id": "651562a4a14b3c63fae4a0d5",
         },
+      });
+      if (status === 200) {
+        // navigate("/login");
+        setRegisterSuccess(true);
+        setUserData(data);
+        setRegisterData({
+          firstName: "",
+          lastName: "",
+          email: "",
+        });
+        dispatch({ type: "setUserInfo", payload: data });
+        console.log("user Created successFully");
+        console.log("this is data that is created", data);
       }
-    );
-    setfirstName("");
-    setfirstName("");
-    setEmail("");
+    } catch (error) {
+      console.log("this is error", error);
+    }
   };
   return (
     <div className={styles.appContainer}>
@@ -57,24 +67,31 @@ const CreateUser = () => {
         </div>
         <div className={styles.inputWrapper}>
           <input
-            onChange={handleName}
+            value={registerData.firstName}
+            onChange={handleRegisterInput}
             className={styles.inputBox}
             placeholder="Enter the first Name"
             type="text"
+            name="firstName"
           />
           <input
-            onChange={handleLastName}
+            onChange={handleRegisterInput}
+            value={registerData.lastName}
             className={styles.inputBox}
             placeholder="Enter the Last Name"
             type="text"
+            name="lastName"
           />
           <input
-            onChange={handleEmail}
+            value={registerData.email}
+            onChange={handleRegisterInput}
             className={styles.inputBox}
             placeholder="Enter the Email"
+            name="email"
             type="text"
           />
         </div>
+        {registerSuccess && <div>{userData.id}</div>}
         <p>
           People who use our service may have uploaded your contact information
           to Instagram. Learn More
@@ -91,4 +108,4 @@ const CreateUser = () => {
   );
 };
 
-export default CreateUser;
+export default Signup;
