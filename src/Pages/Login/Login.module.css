@@ -2,16 +2,22 @@
     height: 100vh;
     display: flex;
     width: 100%;
-    background-color: aliceblue;
+    background-color: white;
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
 }
+.heading{
+font-size: 33px;
+margin-top: 1.5rem;
+color: black;
+font-weight: 600;
+}
 .loginWrapper{
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 50vh;
     gap: 2rem;
     border: 1px solid rgba(128, 128, 128, 0.525);
 align-items: center;

@@ -15,6 +15,7 @@ const Signup = () => {
     firstName: "",
     lastName: "",
     email: "",
+    picture: "https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg",
   });
   let { dispatch } = useContext(UserDetailContext);
 
@@ -55,7 +56,7 @@ const Signup = () => {
       <div className={styles.createuserContainer}>
         <h1 className={styles.heading}>Instagram</h1>
         <p className={styles.signupTxt}>
-          Signup to see photos and videos <br /> from Your friends.
+          Signup to see photos and videos from Your friends.
         </p>
         <div className={styles.btnWrapper}>
           <AiFillFacebook className={styles.fbIcon} />
@@ -93,11 +94,11 @@ const Signup = () => {
           />
         </div>
         {registerSuccess && <div>{userData.id}</div>}
-        <p>
+        <p className={styles.paragraph}>
           People who use our service may have uploaded your contact information
           to Instagram. Learn More
         </p>
-        <p>
+        <p className={styles.paragraph}>
           By signing up, you agree to our Terms , Privacy Policy and Cookies
           Policy .
         </p>
@@ -108,7 +109,7 @@ const Signup = () => {
         <div className={styles.loginWrapper}>
           <p>Already Have a Account ?</p>
           <Link to={"/login"}>
-            <button className={styles.loginBtn}>Login</button>
+            <p className={styles.loginBtn}>Login</p>
           </Link>
         </div>
       </div>

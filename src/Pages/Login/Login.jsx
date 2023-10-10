@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <div className={styles.loginAppContainer}>
       <div className={styles.loginWrapper}>
-        <h1>Instagram</h1>
+        <h1 className={styles.heading}>Instagram</h1>
         <div className={styles.loginForm}>
           <input
             onChange={handleEmail}

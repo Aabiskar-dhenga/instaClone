@@ -8,15 +8,13 @@ import { UserDetailContext } from "../../Usecontext/Usecontext";
 const CommentSection = ({ item }) => {
   const {
     state: { userInfo },
-    dispatch,
   } = useContext(UserDetailContext);
   console.log("this is state", userInfo);
   // console.log("this is okkitem", item);
 
   const api = `https://dummyapi.io/data/v1/post/${item.id}/comment`;
   const CommentApi = "https://dummyapi.io/data/v1/comment/create";
-  let [PostId, setPostId] = useState("");
-  let [OwnerId, setOwnerId] = useState("");
+
   const [commentArr, setCommentArr] = useState([]);
   let [InputComment, setInputComment] = useState("");
   let handleValue = (e) => {
@@ -25,16 +23,8 @@ const CommentSection = ({ item }) => {
   };
 
   useEffect(() => {
-    UpdatingId();
     GetAllCommentByPost();
   }, [item]);
-
-  let UpdatingId = () => {
-    let post = item.id;
-    let owner = item.owner.id;
-    setOwnerId(owner);
-    setPostId(post);
-  };
 
   const GetAllCommentByPost = async () => {
     try {
@@ -58,8 +48,8 @@ const CommentSection = ({ item }) => {
           CommentApi,
           {
             message: InputComment,
-            owner: OwnerId,
-            post: PostId,
+            owner: userInfo.id,
+            post: item.id,
           },
           {
             headers: {

@@ -33,7 +33,7 @@ const Usercontainer = () => {
           <div className={styles.imgWrapper}>
             <img
               className={styles.userProfile}
-              src="https://images.pexels.com/photos/35183/people-homeless-man-male.jpg?auto=compress&cs=tinysrgb&w=600"
+              src={userInfo?.picture}
               alt="userprofile"
             />
           </div>

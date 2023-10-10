@@ -9,15 +9,18 @@ import Profile from "./Pages/Profile/Profile.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
 import Signup from "./Pages/Signup/Signup.jsx";
 import { UserContextProvider } from "./Usecontext/Usecontext.jsx";
+import ProtectedRoute from "./Pages/ProtectedRoute/ProtectedRoute.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <UserContextProvider>
     <ChakraProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile/:id" element={<Profile />} />
+          </Route>
           <Route path="/login" element={<Login />} />
-          <Route path="/profile/:id" element={<Profile />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
